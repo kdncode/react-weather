@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Title from './components/Title';
 import Form from './components/Form';
@@ -15,6 +14,7 @@ class App extends Component {
 		country: undefined,
 		humidity: undefined,
 		description: undefined,
+		icon: undefined,
 		error: undefined
 	}
 
@@ -22,7 +22,7 @@ class App extends Component {
 		e.preventDefault();
 		const city = e.target.elements.city.value;
 
-		const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY }&units=metric`);
+		const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY }&units=Imperial`);
 		const data = await api_call.json();
 		
 		if ( city ) {
@@ -34,6 +34,7 @@ class App extends Component {
 				country: data.sys.country,
 				humidity: data.main.humidity,
 				description: data.weather[0].description,
+				icon: data.weather.icon,
 				error: ''
 			})
 		} else {
@@ -46,27 +47,34 @@ class App extends Component {
 				error: 'Please enter a city'
 			})
 		}
-
 	}
 
 	render() {
 		return (
-			<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<h1 className="App-title">Welcome to React</h1>
-			</header>
-			
-			<Title />
-			<Form getWeather={this.getWeather} />
-			<Weather 
-				temperature={this.state.temperature}
-				city={this.state.city}
-				country={this.state.country}
-				humidity={this.state.humidity}
-				description={this.state.description}
-				error={this.state.error}
-			/>
+			<div>
+				<div className="wrapper">
+					<div className="main">
+						<div className="container">
+							<div className="row">
+								<div className="col-sm-5 title-container">
+									<Title />
+								</div>
+								<div className="col-sm-7 form-container">
+									<Form getWeather={this.getWeather} />
+									<Weather 
+										temperature={this.state.temperature}
+										city={this.state.city}
+										country={this.state.country}
+										humidity={this.state.humidity}
+										description={this.state.description}
+										icon={this.state.icon}
+										error={this.state.error}
+									/>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}

@@ -1,28 +1,116 @@
-.App {
+body {
+  font-family: 'Product Sans', Arial, Helvetica, sans-serif
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #ff57b9;
+  background: -moz-linear-gradient(120deg, #FF57B9, #e8f19dd1);
+  background: -webkit-linear-gradient(120deg, #FF57B9, #e8f19dd1);
+  background: linear-gradient(120deg, #FF57B9, #e8f19dd1 ); */
+}
+
+.main {
+  height: 90vh;
+  width: 80%;
+  margin: 0 auto;
+  background: #ff57b9;
+  background: -moz-linear-gradient(120deg, #FF57B9, #e8f19dd1);
+  background: -webkit-linear-gradient(120deg, #FF57B9, #e8f19dd1);
+  background: linear-gradient(120deg, #FF57B9, #ff5555 );
+  box-shadow: 3px 12px 32px -13px rgba(0, 0, 0, .75);
+}
+
+.title-container {
+  height: 90vh;
+  color: #000;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://comosaconnect.org/wp-content/uploads/2015/12/Flat-Mountains-Landscape_1024.jpg') center center no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.title-container__title {
+  color: red;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.title-container__subtitle {
+  color: greenyellow;
 }
 
-.App-title {
-  font-size: 1.5em;
+.form-container {
+  height: 90vh;
+  padding-top: 100px;
+  padding-left: 50px;
+  background: #2c3e50;
 }
 
-.App-intro {
-  font-size: large;
+input[type=text] {
+  width: 30%;
+  border: none;
+  padding-bottom: 4px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+  /* border-radius: 7px; */
+  border-bottom: solid 1px #F3AEB4;
+  background: transparent;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input[type=text] {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+  -webkit-text-fill-color: #fff !important;
+}
+
+button {
+  border: 0;
+  padding: 8px 30px;
+  margin: 0 2px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(120deg, #FF57B9, #ff5555 );
+}
+
+button:hover {
+  
+}
+
+button:active {
+  outline: none;
+}
+
+.weather__info {
+  width: 60%;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.weather__key {
+  color: #d7ab9d;
+  font-weight: 400;
+  padding: 3px 0;
+}
+
+.weather__value {
+  color: #fff;
+  font-weight: 200;
+}
+
+.weather__error {
+  color: #ff5757;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
