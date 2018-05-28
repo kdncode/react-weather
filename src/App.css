@@ -7,6 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fff;
   /* background: #ff57b9;
   background: -moz-linear-gradient(120deg, #FF57B9, #e8f19dd1);
   background: -webkit-linear-gradient(120deg, #FF57B9, #e8f19dd1);
@@ -17,11 +18,11 @@ body {
   height: 90vh;
   width: 80%;
   margin: 0 auto;
-  background: #ff57b9;
+  /* background: #ff57b9;
   background: -moz-linear-gradient(120deg, #FF57B9, #e8f19dd1);
   background: -webkit-linear-gradient(120deg, #FF57B9, #e8f19dd1);
   background: linear-gradient(120deg, #FF57B9, #ff5555 );
-  box-shadow: 3px 12px 32px -13px rgba(0, 0, 0, .75);
+  box-shadow: 3px 12px 32px -13px rgba(0, 0, 0, .75); */
 }
 
 .title-container {
@@ -36,22 +37,21 @@ body {
 }
 
 .title-container__title {
-  color: red;
+  color: rgb(58, 55, 55);
 }
 
 .title-container__subtitle {
-  color: greenyellow;
+  color: palevioletred;
 }
 
 .form-container {
   height: 90vh;
   padding-top: 100px;
   padding-left: 50px;
-  background: #2c3e50;
 }
 
 input[type=text] {
-  width: 30%;
+  width: 60%;
   border: none;
   padding-bottom: 4px;
   color: #fff;
@@ -61,31 +61,37 @@ input[type=text] {
   font-size: 20px;
   /* border-radius: 7px; */
   border-bottom: solid 1px #F3AEB4;
-  background: transparent;
-  outline: none;
 }
 
-input[type=text] {
+/* input[type=text] {
   outline: none;
-}
+} */
 
-input:-webkit-autofill {
+/* input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
   -webkit-text-fill-color: #fff !important;
-}
+} */
 
 button {
   border: 0;
-  padding: 8px 30px;
+  padding: 10px 30px;
   margin: 0 2px;
   font-size: 20px;
   cursor: pointer;
   color: #fff;
+  border-radius: 7px;
+  background: #ff57b9;
+  background: -moz-linear-gradient(120deg, #FF57B9, #ff5555);
+  background: -webkit-linear-gradient(120deg, #FF57B9, #ff5555);
   background: linear-gradient(120deg, #FF57B9, #ff5555 );
+  box-shadow: 3px 12px 32px -13px rgba(0, 0, 0, .75); 
 }
 
 button:hover {
-  
+  background: #7388ff;
+  background: -moz-linear-gradient(120deg, #7388ff, #2fff8c );
+  background: -webkit-linear-gradient(120deg, #7388ff, #2fff8c );
+  background: linear-gradient(120deg, #7388ff, #2fff8c);
 }
 
 button:active {
@@ -96,17 +102,19 @@ button:active {
   width: 60%;
   font-size: 20px;
   font-weight: 200;
+  padding-top: 30px;
 }
 
 .weather__key {
-  color: #d7ab9d;
+  color: #575757;
   font-weight: 400;
   padding: 3px 0;
 }
 
 .weather__value {
-  color: #fff;
+  color: #ff5555;
   font-weight: 200;
+  padding-left: 3px;
 }
 
 .weather__error {

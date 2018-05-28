@@ -34,7 +34,7 @@ class App extends Component {
 				country: data.sys.country,
 				humidity: data.main.humidity,
 				description: data.weather[0].description,
-				icon: data.weather.icon,
+				icon: data.weather[0].icon,
 				error: ''
 			})
 		} else {
@@ -56,10 +56,10 @@ class App extends Component {
 					<div className="main">
 						<div className="container">
 							<div className="row">
-								<div className="col-sm-5 title-container">
-									<Title />
+								<div className="col-12 form-title">
+									<Title/>
 								</div>
-								<div className="col-sm-7 form-container">
+								<div className="col-12 form-container">
 									<Form getWeather={this.getWeather} />
 									<Weather 
 										temperature={this.state.temperature}
@@ -70,7 +70,7 @@ class App extends Component {
 										icon={this.state.icon}
 										error={this.state.error}
 									/>
-								</div> 
+								</div>	
 							</div>
 						</div>
 					</div>
