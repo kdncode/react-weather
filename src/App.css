@@ -15,8 +15,8 @@ body {
 }
 
 .main {
-  height: 90vh;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
   /* background: #ff57b9;
   background: -moz-linear-gradient(120deg, #FF57B9, #e8f19dd1);
@@ -26,14 +26,14 @@ body {
 }
 
 .title-container {
-  height: 90vh;
+  height: 30vh;
   color: #000;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('https://comosaconnect.org/wp-content/uploads/2015/12/Flat-Mountains-Landscape_1024.jpg') center center no-repeat;
-  background-size: cover;
+  /* background: url('https://comosaconnect.org/wp-content/uploads/2015/12/Flat-Mountains-Landscape_1024.jpg') center center no-repeat;
+  background-size: cover; */
 }
 
 .title-container__title {
@@ -46,8 +46,8 @@ body {
 
 .form-container {
   height: 90vh;
-  padding-top: 100px;
-  padding-left: 50px;
+  padding-top: 80px;
+  /* padding-left: 50px; */
 }
 
 input[type=text] {
