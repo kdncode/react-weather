@@ -37,6 +37,7 @@ class App extends Component {
 				icon: data.weather[0].icon,
 				error: ''
 			});
+			
 		} else {
 			this.setState({
 				temperature: undefined,
