@@ -37,7 +37,7 @@ class App extends Component {
 				icon: data.weather[0].icon,
 				error: ''
 			});
-			
+
 		} else {
 			this.setState({
 				temperature: undefined,
@@ -46,7 +46,7 @@ class App extends Component {
 				humidity: undefined,
 				description: undefined,
 				error: 'Please enter a city'
-			})
+			});
 		}
 	}
 
