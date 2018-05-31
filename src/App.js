@@ -25,7 +25,7 @@ class App extends Component {
 		const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY }&units=Imperial`);
 		const data = await api_call.json();
 		
-		if ( city ) {
+		if (city) {
 			console.log(data);
 
 			this.setState({
